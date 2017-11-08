@@ -14,15 +14,15 @@ import seeba.task.RomanConverter.service.RomanConverterService;
 
 @Controller
 public class RomanConverterController {
-	
-	public RomanConverterController(RomanConverterService romanControllerService) {
-		super();
-		this.romanControllerService = romanControllerService;
-	}
 
 	public RomanConverterController() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public RomanConverterController(RomanConverterService romanControllerService) {
+		super();
+		this.romanControllerService = romanControllerService;
 	}
 
 	@Autowired
