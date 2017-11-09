@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import seeba.task.RomanConverter.service.RomanConverterService;
 
 /**
- * This is main controller
+ * This is the Main Controller, that has simulates as "API" for RomanConverterService
  * 
  * @author Esmeralda
  *
@@ -28,9 +28,15 @@ public class RomanConverterController {
 	@Autowired
 	private RomanConverterService romanControllerService;
 	
+	/**
+	 * 
+	 * @param number - integer that has to be converted to Roman numerals
+	 * @return romanNumber - Roman numeral for "number"
+	 * 
+	 */
 	public String romanConvertorApi (int number) {
 		String romanNumber = new String();
-		
+		// Call to service
 		romanNumber = romanControllerService.toRomanNumberFormat(number);
 		
 		return romanNumber;
